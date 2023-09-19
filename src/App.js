@@ -2,8 +2,6 @@ import { useState } from 'react';
 import './App.css';
 import Input from './Components/input_note';
 import Cards from './Components/Cards';
-import { Route, Routes } from 'react-router-dom';
-import Maximize from './Components/Maximize';
 
 function App() {
   const [isActive, setActive] = useState(false);
