@@ -21,6 +21,9 @@ function Card(props) {
         }
         desp = desp.substr(0, 350) + "..."
     }
+    else {
+        desp = desp1;
+    }
     let removeNote = props.removeNote;
     function handleMaximize() {
         alert("This feature will be added soon...");
