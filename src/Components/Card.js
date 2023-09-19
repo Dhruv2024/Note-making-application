@@ -13,7 +13,7 @@ function Card(props) {
         console.log("hi")
         for (let i = 0; i < 350; i++) {
             let slice = desp1.substr(prev, 50);
-            if (i % 50 == 0) {
+            if (i % 50 === 0) {
                 prev = i + 2;
                 desp += "\n";
                 desp += slice;
