@@ -1,0 +1,61 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 2px 2px 4px lightgray;
+}
+
+.input-note {
+    resize: none;
+    height: 7vh;
+    width: 40vw;
+    padding-left: 0.6vw;
+    /* border-bottom: none; */
+    outline: none;
+}
+
+
+
+.set-border {
+    border-top: none;
+}
+
+.show {
+    padding-left: 0.6vw;
+    width: 40vw;
+    resize: none;
+    border-bottom: none;
+    outline: none;
+}
+
+/* .show:focus {
+    border: none;
+} */
+
+.not-show {
+    display: none;
+}
+
+.button {
+    all: unset;
+    margin: 7px;
+    cursor: pointer;
+    background-color: lightskyblue;
+    border-radius: 5px;
+    border: 2px solid black;
+    padding: 5px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.style-title::placeholder {
+    color: red;
+    font-size: 1.2rem;
+    opacity: 0.5;
+}
+
+.input-note::placeholder {
+    font-size: 1.2rem;
+    color: blue;
+    opacity: 0.3;
+}
