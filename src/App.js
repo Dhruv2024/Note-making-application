@@ -19,7 +19,7 @@ function App() {
     }
   }
   function handleDelete(id) {
-    console.log(id)
+    // console.log(id)
     const newtasks = notes.filter(note => note.id !== id);
     setNotes(newtasks);
   }

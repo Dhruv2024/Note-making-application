@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import './input_note.css'
 import { toast } from 'react-toastify';
+
+
 function Input(props) {
+
     const [noteData, setNotedata] = useState({
         title: "",
         note: ""
@@ -24,12 +27,22 @@ function Input(props) {
             }
         })
     }
+    function reset() {
+        setNotedata({
+            title: "",
+            note: ""
+        })
+    }
     function clickHandler() {
         let title = noteData.title;
         let desp = noteData.note;
         let id = -1;
         if (title.length === 0 && desp.length === 0) {
             toast.warn("Can't Insert note without title or description")
+            return;
+        }
+        if (title.length === 0) {
+            toast.warn("Enter some title!!");
             return;
         }
         if (notes.length !== 0) {
@@ -45,14 +58,15 @@ function Input(props) {
             desp: desp
         };
         let arr = [temp, ...notes];
+        reset();
         setNotes(arr);
     }
     // console.log(notes)
     return (
         <>
             <div className="main">
-                <textarea className={isActive ? 'show style-title' : 'not-show'} placeholder='Title' name="title" onChange={updateNote} />
-                <textarea className={isActive ? 'input-note set-border' : 'input-note'} onClick={handle} placeholder='Note' name="note" onChange={updateNote} />
+                <textarea className={isActive ? 'show style-title' : 'not-show'} placeholder='Title' name="title" onChange={updateNote} value={noteData.title} />
+                <textarea className={isActive ? 'input-note set-border' : 'input-note'} onClick={handle} placeholder='Note' name="note" onChange={updateNote} value={noteData.note} />
             </div>
             <button onClick={clickHandler} className='button'>Add Note</button>
         </>

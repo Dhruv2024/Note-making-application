@@ -2,9 +2,80 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
+    position: relative;
 }
 
 .card-hover :hover {
     background-color: aqua;
+}
+
+.noNote-message {
+    display: flex;
+    height: 75vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-icon {
+    font-size: 10vh;
+}
+
+.no-note {
+    font-size: xx-large;
+}
+
+.maxi {
+    display: flex;
+    justify-content: center;
+    /* display: none; */
+}
+
+.content {
+    position: absolute;
+    top: 5vh;
+    height: 93vh;
+    width: 99vw;
+    background-color: lightyellow;
+    color: black;
+    box-shadow: 10px 10px 100px lightgray, -10px -10px 100px lightgray;
+}
+
+.content h1 {
+    color: green
+}
+
+.content p {
+    width: 99vw;
+    height: 83vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.content ::-webkit-scrollbar {
+    width: 20px;
+}
+
+
+.content ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 5px;
+}
+
+.content ::-webkit-scrollbar-thumb {
+    background: skyblue;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: blue;
+}
+
+.close {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 1px;
+    font-size: 2.1rem;
+    /* color: white; */
 }

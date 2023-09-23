@@ -3,17 +3,22 @@ import { AiFillDelete } from "react-icons/ai"
 import { CiMaximize1 } from "react-icons/ci"
 
 function Card(props) {
+
+    let setShow = props.setShow;
+
+    let setIndex = props.setIndex;
+
     let note = props.note;
     let title = note.title;
     let desp1 = note.desp;
     let id = note.id;
     let desp = "";
     let prev = 0;
-    if (desp1.length > 100) {
+    if (desp1.length > 45) {
         console.log("hi")
         for (let i = 0; i < 350; i++) {
-            let slice = desp1.substr(prev, 50);
-            if (i % 50 === 0) {
+            let slice = desp1.substr(prev, 45);
+            if (i % 45 === 0) {
                 prev = i + 2;
                 desp += "\n";
                 desp += slice;
@@ -26,7 +31,9 @@ function Card(props) {
     }
     let removeNote = props.removeNote;
     function handleMaximize() {
-        alert("This feature will be added soon...");
+        // alert("This feature will be added soon...");
+        setIndex(id);
+        setShow(true);
     }
     return (
         <div className='card'>
@@ -39,3 +46,4 @@ function Card(props) {
     )
 }
 export default Card;
+
