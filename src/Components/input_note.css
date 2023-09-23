@@ -59,3 +59,13 @@
     color: blue;
     opacity: 0.3;
 }
+
+@media (max-width: 950px) {
+    .input-note {
+        width: 60vw;
+    }
+
+    .show {
+        width: 60vw;
+    }
+}
