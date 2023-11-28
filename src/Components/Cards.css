@@ -36,16 +36,21 @@
     top: 5vh;
     height: 93vh;
     width: 99vw;
-    background-color: lightyellow;
+    /* background-color: lightyellow; */
+    background-color: #4A5255;
     color: black;
     box-shadow: 10px 10px 100px lightgray, -10px -10px 100px lightgray;
 }
 
 .content h1 {
-    color: green
+    /* color: green */
+    color: white;
+    border-bottom: 3px solid rgb(211, 185, 185);
 }
 
 .content p {
+    color: rgb(231, 219, 219);
+    font-size: larger;
     width: 99vw;
     height: 83vh;
     overflow-y: auto;
@@ -79,9 +84,11 @@
     font-size: 2rem;
     background-color: black;
     color: white;
+    border-radius: 50%;
     /* color: white; */
 }
 
 .close:hover {
-    color: yellow;
+    transform: scale(1.2);
+    /* color: yellow; */
 }

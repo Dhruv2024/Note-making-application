@@ -39,7 +39,19 @@ function Cards(props) {
                             {/* {notes.length - index - 1}
                             {console.log(notes[notes.length - index - 1])} */}
                             <h1>{notes[notes.length - index - 1].title}</h1>
-                            <p>{notes[notes.length - index - 1].desp}</p>
+                            {/* <p>{notes[notes.length - index - 1].desp}</p> */}
+                            <p>
+                                <ul>
+                                    <li key={index}>
+                                        {notes[notes.length - index - 1].desp.split('\n').map((line, lineIndex) => (
+                                            <span key={lineIndex}>
+                                                {line}
+                                                <br />
+                                            </span>
+                                        ))}
+                                    </li>
+                                </ul>
+                            </p>
                         </div>
                         <MdClose className='close' onClick={handleClose} />
 

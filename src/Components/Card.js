@@ -14,13 +14,14 @@ function Card(props) {
     let id = note.id;
     let desp = "";
     let prev = 0;
+    //console.log(desp1.length);
     if (desp1.length > 45) {
         console.log("hi")
-        for (let i = 0; i < 350; i++) {
+        for (let i = 0; i < 300; i++) {
             let slice = desp1.substr(prev, 45);
             if (i % 45 === 0) {
                 prev = i + 2;
-                desp += "\n";
+                desp += '\n';
                 desp += slice;
             }
         }
@@ -29,18 +30,30 @@ function Card(props) {
     else {
         desp = desp1;
     }
+    // desp = desp1
     let removeNote = props.removeNote;
     function handleMaximize() {
         // alert("This feature will be added soon...");
         setIndex(id);
         setShow(true);
     }
+    //console.log("Desp:  ", desp)
     return (
         <div className='card'>
             <AiFillDelete className='delete-icon' onClick={() => removeNote(id)} />
             <CiMaximize1 className='maximize' onClick={handleMaximize} />
             <div className='title'>{title}</div>
-            <div className='desp'>{desp}</div>
+            <div className='desp'>
+                {desp}
+                {/* <li key={id}>
+                    {desp.split('\n').map((line, lineIndex) => (
+                        <span key={lineIndex}>
+                            {line}
+                            <br />
+                        </span>
+                    ))}
+                </li> */}
+            </div>
 
         </div>
     )
