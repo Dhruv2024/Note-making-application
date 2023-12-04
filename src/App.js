@@ -19,10 +19,13 @@ function App() {
     }
   }
   function handleDelete(id) {
-    // console.log(id)
-    const newtasks = notes.filter(note => note.id !== id);
-    setNotes(newtasks);
+    const newTasks = notes.filter(note => note.id !== id);
+    setNotes(newTasks);
+
+    // Update local storage after deleting the note
+    localStorage.setItem('notes', JSON.stringify(newTasks));
   }
+
   return (
     <div className="App" onClick={handleApp}>
       <h1>Note Making Application</h1>
